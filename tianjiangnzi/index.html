@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天降女子-浪漫幻想题材的漫画推荐与阅读指南</title>
+    <meta name="description" content="本站专注于“天降女子”题材的漫画与动漫作品推荐，涵盖甜蜜恋爱、奇幻邂逅、都市传说等热门分支，提供作品简介、阅读渠道及角色分析。">
+    <meta name="keywords" content="天降女子, 漫画推荐, 浪漫恋爱, 奇幻漫画, 漫画阅读指南">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff7eb3;
+            --secondary-color: #ff758c;
+            --accent-color: #7afcff;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f9f9fc;
+            --white: #ffffff;
+            --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmN2ViMyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2UzZTNlMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz48L3N2Zz4=');
+            background-size: cover;
+            opacity: 0.6;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: rgba(255, 117, 140, 0.1);
+            color: var(--secondary-color);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero h1 .highlight {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 117, 140, 0.6);
+        }
+
+        /* Intro Section */
+        .intro {
+            text-align: center;
+        }
+
+        .intro h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--text-gray);
+            font-size: 16px;
+        }
+
+        /* Features Grid */
+        .features {
+            background-color: var(--white);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: 16px;
+            background-color: var(--bg-light);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background-color: var(--white);
+            box-shadow: var(--card-shadow);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        /* Content Section */
+        .content-section {
+            background-color: var(--bg-light);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .section-header h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 24px;
+            background-color: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .view-all {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .view-all:hover {
+            text-decoration: underline;
+        }
+
+        /* Manga Cards */
+        .manga-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .manga-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .manga-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .manga-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .manga-category {
+            font-size: 12px;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .manga-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .manga-desc {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .manga-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+            font-size: 13px;
+            color: #999;
+        }
+
+        .manga-rating {
+            color: #ffc107;
+            font-weight: 600;
+        }
+
+        /* Category Pills */
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .pill {
+            padding: 10px 24px;
+            background-color: var(--white);
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-gray);
+            border: 1px solid #eee;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .pill:hover, .pill.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: var(--white);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 20px 0;
+            background: none;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d2d2d;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                position: relative;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                height: auto;
+                padding: 80px 0;
+                text-align: center;
+            }
+
+            .hero-content {
+                margin: 0 auto;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">天降<span>女子</span>漫画馆</a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#genre">热门题材</a></li>
+                    <li><a href="#recommend">今日推荐</a></li>
+                    <li><a href="#guide">阅读指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <span class="hero-tag">沉浸式浪漫体验</span>
+                <h1>邂逅不期而遇的<br><span class="highlight">天降女子</span></h1>
+                <p>探索“天降女子”这一独特题材的漫画世界，从魔法少女到神秘学姐，从校园传说到都市邂逅。在这里，每一次相遇都是命运的转折。</p>
+                <a href="#recommend" class="btn">开始探索</a>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="section-padding intro">
+            <div class="container">
+                <h2>什么是“天降女子”题材？</h2>
+                <p>“天降女子”通常指故事中的女主角以一种非传统、突发或奇幻的方式突然出现在男主角的生活中。这种设定打破了日常生活的平淡，迅速建立起强烈的戏剧冲突和情感张力。无论是温馨治愈的恋爱喜剧，还是充满未知的奇幻冒险，这类作品都能带给读者新鲜且强烈的代入感。</p>
+            </div>
+        </section>
+
+        <!-- Genre Selection -->
+        <section class="section-padding" id="genre">
+            <div class="container">
+                <div class="section-header">
+                    <h2>热门题材分类</h2>
+                </div>
+                <div class="category-list">
+                    <button class="pill active">全部</button>
+                    <button class="pill">校园恋爱</button>
+                    <button class="pill">奇幻冒险</button>
+                    <button class="pill">都市传说</button>
+                    <button class="pill">科幻未来</button>
+                    <button class="pill">治愈系</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Grid -->
+        <section class="section-padding content-section" id="recommend">
+            <div class="container">
+                <div class="section-header">
+                    <h2>精选作品推荐</h2>
+                    <a href="#" class="view-all">查看更多 ></a>
+                </div>
+                <div class="grid-3">
+                    <!-- Card 1 -->
+                    <article class="manga-card">
+                        <img src="https://picsum.photos/seed/cyberpunk/400/250" alt="封面图" class="manga-img">
+                        <div class="manga-info">
+                            <span class="manga-category">科幻未来</span>
+                            <h3 class="manga-title">来自2077的空降恋人</h3>
+                            <p class="manga-desc">为了拯救世界，未来少女跨越时空来到现代，却意外住进了男主角的公寓。两人从互相试探到产生真挚情感，开启了一段跨越时代的爱情故事。</p>
+                            <div class="manga-meta">
+                                <span>更新至 第42话</span>
+                                <span class="manga-rating">9.2分</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="manga-card">
+                        <img src="https://picsum.photos/seed/school/400/250" alt="封面图" class="manga-img">
+                        <div class="manga-info">
+                            <span class="manga-category">校园恋爱</span>
+                            <h3 class="manga-title">转校生是神秘学姐</h3>
+                            <p class="manga-desc">看似普通的转校生其实是隐藏身份的学姐，她总是以各种理由出现在男主角身边。表面高冷实则傲娇的设定，让两人的日常充满笑料与甜蜜。</p>
+                            <div class="manga-meta">
+                                <span>更新至 第15话</span>
+                                <span class="manga-rating">8.9分</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="manga-card">
+                        <img src="https://picsum.photos/seed/fantasy/400/250" alt="封面图" class="manga-img">
+                        <div class="manga-info">
+                            <span class="manga-category">奇幻冒险</span>
+                            <h3 class="manga-title">被神明召唤的凡人</h3>
+                            <p class="manga-desc">男主角在上学途中被神秘光芒包裹，醒来时发现自己身处异世界，而身边正坐着一位自称是他的“守护灵”的少女。为了寻找回家之路，两人踏上征途。</p>
+                            <div class="manga-meta">
+                                <span>连载中</span>
+                                <span class="manga-rating">9.5分</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="manga-card">
+                        <img src="https://picsum.photos/seed/ghost/400/250" alt="封面图" class="manga-img">
+                        <div class="manga-info">
+                            <span class="manga-category">都市传说</span>
+                            <h3 class="manga-title">午夜便利店的不速之客</h3>
+                            <p class="manga-desc">只有午夜才会出现的便利店，只对特定的人开放。在这个充满奇遇的地方，男主角遇到了一位总是喝着热咖啡的神秘女子，她似乎知道很多秘密。</p>
+                            <div class="manga-meta">
+                                <span>更新至 第28话</span>
+                                <span class="manga-rating">8.7分</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="manga-card">
+                        <img src="https://picsum.photos/seed/slime/400/250" alt="封面图" class="manga-img">
+                        <div class="manga-info">
+                            <span class="manga-category">异能战斗</span>
+                            <h3 class="manga-title">契约之下的绝对服从</h3>
+                            <p class="manga-desc">男主角意外签订契约，成为了一位强大却总是迷路的异界公主的仆人。从被迫同居到共同对抗敌人，两人的羁绊在战斗中不断加深。</p>
+                            <div class="manga-meta">
+                                <span>完结</span>
+                                <span class="manga-rating">8.8分</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="manga-card">
+                        <img src="https://picsum.photos/seed/coffee/400/250" alt="封面图" class="manga-img">
+                        <div class="manga-info">
+                            <span class="manga-category">治愈系</span>
+                            <h3 class="manga-title">雨天的咖啡厅与少女</h3>
+                            <p class="manga-desc">在一家只在雨天营业的咖啡厅里，男主角遇到了一位总是撑着红伞的神秘少女。她似乎在等待一个永远不会来的人，而男主角的出现改变了这一切。</p>
+                            <div class="manga-meta">
+                                <span>单行本发售</span>
+                                <span class="manga-rating">9.0分</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section class="section-padding" id="guide">
+            <div class="container">
+                <div class="section-header">
+                    <h2>阅读指南与选择建议</h2>
+                </div>
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧐</div>
+                        <h3>关注剧情设定</h3>
+                        <p>“天降”的设定只是引子，优秀的作品会在此基础上展开合理的逻辑闭环，而非单纯为了恋爱而恋爱。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎭</div>
+                        <h3>角色反差萌</h3>
+                        <p>许多经典作品通过女主角外表与性格的反差（如：外表高冷实则粘人）来制造戏剧张力。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚖️</div>
+                        <h3>尊重双方意愿</h3>
+                        <p>健康的恋爱关系建立在相互尊重的基础上。推荐选择角色双向奔赴、剧情健康的作品。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section-padding faq" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题 (FAQ)</h2>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <button class="faq-question">“天降女子”题材有什么代表作品？</button>
+                        <div class="faq-answer">
+                            <p>该题材非常广泛，从《我的青春恋爱物语果然有问题》中的比企谷八幡与雪之下雪乃，到《为美好的世界献上祝福！》中的阿克娅，以及近年来流行的各种异世界转生题材，都包含了“天降”元素。在漫画领域，许多轻改漫画也沿用了这一经典设定。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">这类漫画适合什么年龄段的读者？</button>
+                        <div class="faq-answer">
+                            <p>大多数“天降女子”题材的漫画属于少年、青年向（18+）或少女向（12+）。虽然核心是恋爱，但部分作品涉及成人话题或复杂剧情，建议读者根据自身年龄和喜好选择适合的作品。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">在哪里可以阅读这些漫画？</button>
+                        <div class="faq-answer">
+                            <p>本站致力于提供正版、优质的漫画推荐与阅读渠道指引。我们鼓励读者通过官方漫画平台、电子书商店或实体书店支持创作者，以获得最佳的阅读体验。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">如何判断一部漫画是否“好看”？</button>
+                        <div class="faq-answer">
+                            <p>除了查看评分，建议先阅读作品的开头几话。如果开篇的“天降”情节能迅速抓住你的注意力，且后续剧情逻辑连贯、角色互动自然，那么这部作品通常值得继续追读。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">天降女子漫画馆是一个专注于推荐与分析浪漫幻想题材漫画的社区平台，致力于为读者提供优质的阅读指南与内容发现服务。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">最新更新</a></li>
+                        <li><a href="#">热门榜单</a></li>
+                        <li><a href="#">分类浏览</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">阅读指南</a></li>
+                        <li><a href="#">创作者投稿</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 天降女子漫画馆. All rights reserved. 本站内容仅供学习交流，请支持正版。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('show');
+        }
+
+        // FAQ Accordion Logic
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+                
+                // Close all other answers
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.style.maxHeight = null;
+                });
+
+                // Toggle current answer
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+
+        // Category Pill Interaction
+        const pills = document.querySelectorAll('.pill');
+        pills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                pills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+            });
+        });
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('nav-list').classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
