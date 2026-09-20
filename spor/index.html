@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sportica旗舰店 - 专业运动装备与时尚生活解决方案</title>
+    <meta name="description" content="sportica旗舰店提供高品质运动装备、专业跑鞋、休闲运动服饰及生活配件。正品保障、专业尺码指导、极速物流，满足您从健身房到户外的所有运动需求。">
+    <meta name="keywords" content="sportica旗舰店, 运动装备, 跑鞋, 运动服饰, 专业健身, 户外装备">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #c0392b;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.05"><path d="M50 0 L100 50 L50 100 L0 50 Z"/></g></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-image img {
+            max-width: 500px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        /* Categories */
+        .categories {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10%;
+            height: 80%;
+            width: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .category-title {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* Product Grid */
+        .products {
+            margin-bottom: 3rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            height: 250px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .product-info {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-category {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .price span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-light);
+            text-decoration: line-through;
+            margin-left: 5px;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #fff;
+            padding: 4rem 0;
+            margin-top: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 1rem;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #f0f2f5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .feature-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none; /* Simplification for mobile */
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">sportica<span>旗舰店</span></a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">跑鞋系列</a>
+                <a href="#">运动服饰</a>
+                <a href="#">户外装备</a>
+                <a href="#">配件专区</a>
+                <a href="#">品牌故事</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">立即选购</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>释放潜能，定义你的运动风格</h1>
+                    <p>sportica旗舰店汇聚全球顶尖运动科技，为您提供专业跑鞋、透气运动服及多功能户外装备。正品保障，让每一次运动都更加出色。</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <button class="btn" style="background: white; color: var(--primary-color);">探索跑鞋</button>
+                        <button class="btn" style="background: transparent; border: 2px solid white; color: white;">查看新品</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Using a generic sports image placeholder -->
+                    <img src="https://picsum.photos/seed/sportica_hero/500/350" alt="运动装备展示" width="500" height="350">
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="container categories">
+            <div class="section-header">
+                <h2 class="section-title">热门分类</h2>
+                <a href="#" style="color: var(--accent-color); font-weight: 600;">查看全部 &rarr;</a>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <span class="category-icon">🏃</span>
+                    <div class="category-title">专业跑鞋</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">👕</span>
+                    <div class="category-title">速干运动服</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🎒</span>
+                    <div class="category-title">户外背包</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🎧</span>
+                    <div class="category-title">运动耳机</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">💧</span>
+                    <div class="category-title">运动水壶</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🧦</span>
+                    <div class="category-title">压缩袜</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="container products">
+            <div class="section-header">
+                <h2 class="section-title">精选推荐</h2>
+                <a href="#" style="color: var(--accent-color); font-weight: 600;">更多好物 &rarr;</a>
+            </div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">热销</span>
+                        <img src="https://picsum.photos/seed/shoe1/400/400" alt="AirMax Pro 跑鞋" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">跑步鞋</div>
+                        <h3 class="product-title">AirMax Pro 专业缓震跑鞋</h3>
+                        <p class="product-desc">采用空气缓震科技，轻量化设计，适合长距离跑步与日常通勤。</p>
+                        <div class="product-footer">
+                            <div class="price">¥599 <span>¥799</span></div>
+                            <button class="btn btn-primary" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">加入购物车</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">新品</span>
+                        <img src="https://picsum.photos/seed/tech1/400/400" alt="智能运动手表" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">智能穿戴</div>
+                        <h3 class="product-title">Sportica X1 智能运动手表</h3>
+                        <p class="product-desc">全天候心率监测，50米防水，支持多种运动模式识别。</p>
+                        <div class="product-footer">
+                            <div class="price">¥1299</div>
+                            <button class="btn btn-primary" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">加入购物车</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/cloth1/400/400" alt="速干T恤" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">运动服饰</div>
+                        <h3 class="product-title">速干透气运动T恤</h3>
+                        <p class="product-desc">吸湿排汗面料，高弹力设计，运动时保持干爽舒适。</p>
+                        <div class="product-footer">
+                            <div class="price">¥199</div>
+                            <button class="btn btn-primary" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">加入购物车</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/bag1/400/400" alt="登山背包" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">户外装备</div>
+                        <h3 class="product-title">轻量化登山背包 20L</h3>
+                        <p class="product-desc">人体工学背负系统，防泼水面料，适合短途徒步旅行。</p>
+                        <div class="product-footer">
+                            <div class="price">¥359</div>
+                            <button class="btn btn-primary" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">加入购物车</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Features / Trust -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <h4 class="feature-title">正品保障</h4>
+                        <p class="feature-text">所有商品均为官方正品，支持专柜验货，售后无忧。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🚀</div>
+                        <h4 class="feature-title">极速发货</h4>
+                        <p class="feature-text">24小时内闪电发货，支持顺丰/京东快递，次日达。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📏</div>
+                        <h4 class="feature-title">专业尺码</h4>
+                        <p class="feature-text">提供详细的尺码表和跑鞋脚型检测指南，助您选对尺码。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💬</div>
+                        <h4 class="feature-title">专家客服</h4>
+                        <p class="feature-text">专业运动顾问在线，为您解答装备搭配与使用问题。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Story / About -->
+        <section class="container" style="margin-bottom: 4rem;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 3rem; background: #fff; padding: 3rem; border-radius: var(--border-radius); box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="https://picsum.photos/seed/gym/600/400" alt="品牌理念" style="border-radius: var(--border-radius);">
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 class="section-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Sportica：运动改变生活</h2>
+                    <p style="margin-bottom: 1rem; color: var(--text-light);">
+                        Sportica 成立于2015年，致力于为全球运动爱好者提供专业、时尚、高性能的运动装备。我们相信，好的装备能激发身体的潜能。
+                    </p>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-light);">
+                        从实验室的科技研发到生产线的严格品控，每一个细节都力求完美。我们的目标是让每一位用户都能在运动中找到自信与快乐。
+                    </p>
+                    <ul style="margin-bottom: 2rem;">
+                        <li style="margin-bottom: 0.5rem;">✅ 100% 原厂正品货源</li>
+                        <li style="margin-bottom: 0.5rem;">✅ 7天无理由退换货</li>
+                        <li style="margin-bottom: 0.5rem;">✅ 会员积分体系</li>
+                    </ul>
+                    <button class="btn btn-outline">了解更多品牌故事</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>sportica旗舰店</h3>
+                    <p style="color: #bdc3c7; margin-bottom: 1rem; line-height: 1.6;">
+                        专注于运动装备的专业电商平台，为您提供最优质的跑步鞋、运动服饰及户外用品。
+                    </p>
+                    <div style="font-size: 1.5rem; display: flex; gap: 1rem;">
+                        <!-- Social placeholders -->
+                        <span>📱</span>
+                        <span>💬</span>
+                        <span>📷</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>购物指南</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">购物流程</a></li>
+                        <li><a href="#">会员介绍</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>商品分类</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">专业跑鞋</a></li>
+                        <li><a href="#">休闲运动</a></li>
+                        <li><a href="#">户外装备</a></li>
+                        <li><a href="#">运动配件</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 sportica旗舰店 版权所有. 本页面为设计演示，不包含真实交易功能。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                  </html>
