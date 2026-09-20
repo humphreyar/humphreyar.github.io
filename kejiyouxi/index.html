@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="客机游戏网 - 提供全球热门客机模拟飞行游戏下载、评测攻略、机型图鉴及最新版本更新资讯，打造最专业的飞行爱好者社区。">
+    <meta name="keywords" content="客机游戏, 模拟飞行, 飞行游戏, 航空模拟, 飞行员训练, 客机模拟器">
+    <title>客机游戏-全球热门模拟飞行游戏下载与攻略平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary: #1a2a3a;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --text-main: #1f2937;
+            --text-light: #6b7280;
+            --bg-body: #f3f4f6;
+            --bg-card: #ffffff;
+            --border: #e5e7eb;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #0f172a 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Game Grid */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .game-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+            height: 180px;
+            background-color: #e5e7eb;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .game-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+            padding-top: 15px;
+        }
+
+        .rating {
+            color: #f59e0b;
+            font-weight: 600;
+        }
+
+        /* Feature Section */
+        .features {
+            background-color: var(--bg-card);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #eff6ff;
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        /* Simulator List */
+        .simulator-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .sim-item {
+            display: flex;
+            align-items: center;
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sim-icon {
+            font-size: 2rem;
+            margin-right: 20px;
+            color: var(--primary);
+        }
+
+        .sim-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .sim-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: #f8fafc;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .guide-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .guide-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .guide-card ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .guide-card ul li::before {
+            content: "•";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: #94a3b8;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .simulator-list {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                ✈️ <span>客机游戏</span>网
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#games">热门游戏</a></li>
+                    <li><a href="#simulators">模拟器</a></li>
+                    <li><a href="#guides">新手指南</a></li>
+                    <li><a href="#community">社区</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-outline">登录</a>
+                <a href="#" class="btn btn-primary">下载中心</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>云端之上的真实体验<br>沉浸式客机模拟飞行</h1>
+                <p>从波音737到空客A380，在这里探索全球最逼真的客机模拟游戏。获取专业飞行数据、机型图鉴与新手起飞教程。</p>
+                <div class="hero-tags">
+                    <span class="tag">#PC端模拟</span>
+                    <span class="tag">#VR飞行</span>
+                    <span class="tag">#全真驾驶舱</span>
+                    <span class="tag">#全球航线</span>
+                </div>
+                <div>
+                    <a href="#games" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem;">开始飞行</a>
+                    <a href="#guides" class="btn btn-outline" style="padding: 12px 30px; font-size: 1.1rem; color: white; border-color: white;">查看教程</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Games -->
+        <section id="games" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">年度热门客机游戏</h2>
+                    <p class="section-subtitle">精选全球最受欢迎的飞行模拟器，满足从休闲玩家到职业飞行员的不同需求</p>
+                </div>
+                <div class="game-grid">
+                    <!-- Game Card 1 -->
+                    <article class="game-card">
+                        <div class="card-image">
+                            <span class="card-badge">编辑推荐</span>
+                            <img src="https://picsum.photos/seed/plane1/400/250" alt="微软模拟飞行2024封面">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">微软模拟飞行 2024</h3>
+                            <p class="card-desc">最新一代航空模拟体验，拥有全球最详细的机场模型与动态天气系统，支持VR全沉浸式飞行。</p>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 9.8/10</span>
+                                <span>PC / VR</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Game Card 2 -->
+                    <article class="game-card">
+                        <div class="card-image">
+                            <span class="card-badge">高画质</span>
+                            <img src="https://picsum.photos/seed/plane2/400/250" alt="X-Plane 12封面">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">X-Plane 12</h3>
+                            <p class="card-desc">物理引擎极其强悍，拥有超过1400种飞机机型。专业飞行员训练的首选软件。</p>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 9.5/10</span>
+                                <span>PC / Mac</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Game Card 3 -->
+                    <article class="game-card">
+                        <div class="card-image">
+                            <span class="card-badge">休闲易上手</span>
+                            <img src="https://picsum.photos/seed/plane3/400/250" alt="FlyWings 2023封面">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">FlyWings 2023</h3>
+                            <p class="card-desc">适合初学者的客机模拟器，界面友好，拥有丰富的航线任务和简单的控制方式。</p>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 8.0/10</span>
+                                <span>移动端 / PC</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Game Card 4 -->
+                    <article class="game-card">
+                        <div class="card-image">
+                            <span class="card-badge">VR专用</span>
+                            <img src="https://picsum.photos/seed/plane4/400/250" alt="Dovetail Games封面">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">DCS World</h3>
+                            <p class="card-desc">虽然以战斗机闻名，但其包含的运输机和直升机模块同样具备极高的客机模拟精度。</p>
+                            <div class="card-meta">
+                                <span class="rating">⭐ 9.2/10</span>
+                                <span>PC / VR</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Comparison -->
+        <section id="simulators" class="section features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">主流模拟平台对比</h2>
+                    <p class="section-subtitle">如何选择最适合你的客机模拟工具</p>
+                </div>
+                <div class="simulator-list">
+                    <div class="sim-item">
+                        <div class="sim-icon">💻</div>
+                        <div class="sim-info">
+                            <h4>MSFS 2024</h4>
+                            <p>画面表现最强，生态系统最完善，但对硬件配置要求极高。</p>
+                        </div>
+                    </div>
+                    <div class="sim-item">
+                        <div class="sim-icon">🎮</div>
+                        <div class="sim-info">
+                            <h4>X-Plane 12</h4>
+                            <p>物理模拟更硬核，支持跨平台（PC/Mac），适合硬核飞行迷。</p>
+                        </div>
+                    </div>
+                    <div class="sim-item">
+                        <div class="sim-icon">📱</div>
+                        <div class="sim-info">
+                            <h4>手机模拟器</h4>
+                            <p>利用手机陀螺仪和触屏操作，适合随时随地体验飞行的乐趣。</p>
+                        </div>
+                    </div>
+                    <div class="sim-item">
+                        <div class="sim-icon">🧰</div>
+                        <div class="sim-info">
+                            <h4>直升机/运输机</h4>
+                            <p>除了客机，多旋翼与螺旋桨运输机的模拟也是本站的重点内容。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guides" class="section guide-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">飞行新手指南</h2>
+                    <p class="section-subtitle">从地面滑行到万米高空，你需要掌握的关键知识</p>
+                </div>
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <h3>🛫 基础起飞流程</h3>
+                        <ul>
+                            <li>检查油量和仪表读数</li>
+                            <li>滑行至起飞跑道对准跑道</li>
+                            <li>加速至决断速度(V1)并拉起机头</li>
+                            <li>保持爬升率直至达到安全高度</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <h3>🗺️ 熟悉飞行地图</h3>
+                        <ul>
+                            <li>学会查看航路点与导航台</li>
+                            <li>理解风向与风速对航线的影响</li>
+                            <li>掌握航路规划与备降场选择</li>
+                            <li>了解飞行高度层与无线电通讯</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <h3>⚠️ 常见飞行错误</h3>
+                        <ul>
+                            <li>忽视起飞前的预检</li>
+                            <li>在低高度盲目关闭自动驾驶</li>
+                            <li>错过进近定位点导致高度失控</li>
+                            <li>忽视天气系统变化带来的颠簸</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aircraft Gallery Teaser -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">经典客机图鉴</h2>
+                    <p class="section-subtitle">探索人类航空史上的经典机型</p>
+                </div>
+                <div style="display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; scrollbar-width: thin;">
+                    <div style="min-width: 200px; text-align: center;">
+                        <img src="https://picsum.photos/seed/boeing777/200/120" alt="波音777" style="border-radius: 8px; margin-bottom: 10px;">
+                        <h4 style="font-size: 1rem;">波音777</h4>
+                        <p style="font-size: 0.8rem; color: #666;">双引擎宽体客机</p>
+                    </div>
+                    <div style="min-width: 200px; text-align: center;">
+                        <img src="https://picsum.photos/seed/airbus320/200/120" alt="空客A320" style="border-radius: 8px; margin-bottom: 10px;">
+                        <h4 style="font-size: 1rem;">空客A320</h4>
+                        <p style="font-size: 0.8rem; color: #666;">单通道窄体客机</p>
+                    </div>
+                    <div style="min-width: 200px; text-align: center;">
+                        <img src="https://picsum.photos/seed/a380/200/120" alt="空客A380" style="border-radius: 8px; margin-bottom: 10px;">
+                        <h4 style="font-size: 1rem;">空客A380</h4>
+                        <p style="font-size: 0.8rem; color: #666;">四引擎超大型客机</p>
+                    </div>
+                    <div style="min-width: 200px; text-align: center;">
+                        <img src="https://picsum.photos/seed/boeing747/200/120" alt="波音747" style="border-radius: 8px; margin-bottom: 10px;">
+                        <h4 style="font-size: 1rem;">波音747</h4>
+                        <p style="font-size: 0.8rem; color: #666;">平流层巨无霸</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>✈️ 客机游戏网</h2>
+                    <p>致力于为全球飞行爱好者提供最全面的客机模拟游戏资讯、下载与学习资源。让每个人都能体验云端翱翔的自由。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏分类</h4>
+                    <ul>
+                        <li><a href="#">PC模拟器</a></li>
+                        <li><a href="#">手机游戏</a></li>
+                        <li><a href="#">VR体验</a></li>
+                        <li><a href="#">模拟驾驶舱</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源支持</h4>
+                    <ul>
+                        <li><a href="#">硬件配置指南</a></li>
+                        <li><a href="#">飞行摇杆推荐</a></li>
+                        <li><a href="#">插件下载</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">投稿合作</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 客机游戏网 版权所有 | 本站内容仅供学习交流，游戏版权归原开发商所有。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
