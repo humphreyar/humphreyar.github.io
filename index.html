@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="溏心风暴主题曲 - TVB经典剧集《溏心风暴》原声带资源汇总。收录《天道好还》、《包青天》、《爱不疚》等主题曲、插曲及MV，提供歌词、试听及高清下载指引。">
+    <meta name="keywords" content="溏心风暴主题曲, 溏心风暴原声带, 溏心风暴歌曲, 溏心风暴歌词, 天道好还, 爱不疚">
+    <title>溏心风暴主题曲-经典原声带与影视金曲资源库</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #f8f8f8;
+            --text-main: #333333;
+            --text-light: #666666;
+            --accent-gold: #c5a059;
+            --bg-body: #f9f9f9;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #2c0e0e 0%, #4a1a1a 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.03"><path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/></g></g></svg>');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* 通用 Section */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        /* 热门推荐卡片 */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .card-img-placeholder {
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-img-placeholder img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #b71c1c;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: #fff5f5;
+        }
+
+        /* 歌单列表 */
+        .playlist-item {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            transition: background 0.2s;
+        }
+
+        .playlist-item:hover {
+            background: #fafafa;
+        }
+
+        .track-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ddd;
+            width: 50px;
+            text-align: center;
+        }
+
+        .track-info {
+            flex: 1;
+        }
+
+        .track-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .track-artist {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .track-duration {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-right: 20px;
+        }
+
+        .track-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-light);
+            padding: 5px;
+            transition: color 0.2s;
+        }
+
+        .icon-btn:hover {
+            color: var(--primary-color);
+        }
+
+        /* 剧集背景 */
+        .bg-section {
+            background-color: #fff;
+        }
+
+        .tv-series-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .series-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .series-desc {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .series-stats {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        .stat-item span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* 常见问题 FAQ */
+        .faq-item {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #fcfcfc;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: #fafafa;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+            font-size: 1.5rem;
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+            font-size: 1.5rem;
+        }
+
+        .faq-item .faq-question::before, .faq-item .faq-question::after {
+            content: '+';
+            font-weight: 300;
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none; /* 简化处理，移动端隐藏菜单 */
+            }
+
+            .tv-series-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .playlist-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .track-actions {
+                width: 100%;
+                justify-content: flex-end;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18V5l12-2v13"></path>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <circle cx="18" cy="16" r="3"></circle>
+                </svg>
+                <span>金曲回响</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#series">剧集背景</a>
+                <a href="#songs">主题曲列表</a>
+                <a href="#download">资源下载</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>溏心风暴主题曲</h1>
+                <p>重温经典港剧《溏心风暴》系列，聆听由林夕作词、方大同、杨千嬅等演绎的动人旋律，感受乐坛黄金时代的情感共鸣。</p>
+                <div class="hero-tags">
+                    <span class="tag">天道好还</span>
+                    <span class="tag">爱不疚</span>
+                    <span class="tag">方大同</span>
+                    <span class="tag">杨千嬅</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Series Intro -->
+        <section id="series" class="container">
+            <div class="section-header">
+                <h2>剧集背景</h2>
+                <p>关于《溏心风暴》系列及其音乐特色</p>
+            </div>
+            <div class="tv-series-layout">
+                <div class="card-img-placeholder">
+                    <img src="https://picsum.photos/seed/taotin/400/300" alt="溏心风暴剧照">
+                </div>
+                <div class="series-info">
+                    <h3>《溏心风暴》系列</h3>
+                    <p class="series-desc">
+                        《溏心风暴》是香港电视广播有限公司（TVB）制作的一系列经典电视剧，以商战和家庭伦理为核心，剧情紧凑、人物鲜明。该系列不仅剧情扣人心弦，其原声带（OST）也成为了港剧音乐的代表作之一。
+                    </p>
+                    <div class="series-stats">
+                        <div class="stat-item">
+                            <strong>3部</strong>
+                            <span>系列作品</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>2013</strong>
+                            <span>完结时间</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>林夕</strong>
+                            <span>御用填词人</span>
+                        </div>
+                    </div>
+                    <p style="color: var(--text-light);">
+                        剧中主题曲往往紧扣剧情走向，从家庭纷争到商界博弈，音乐成为了推动情感表达的重要工具。特别是《天道好还》与《爱不疚》，至今仍被广泛传唱。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Songs Section -->
+        <section id="songs" class="container" style="background-color: #fff;">
+            <div class="section-header">
+                <h2>经典主题曲列表</h2>
+                <p>精选剧集原声带核心曲目</p>
+            </div>
+
+            <div class="grid-layout">
+                <!-- Song Card 1 -->
+                <article class="card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/tao/300/200" alt="天道好还封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">天道好还</h3>
+                        <div class="card-meta">
+                            <span>演唱：杨千嬅</span>
+                            <span>作词：林夕</span>
+                        </div>
+                        <p class="card-desc">
+                            第一部《溏心风暴》的主题曲。歌词寓意善恶终有报，旋律大气磅礴，完美契合剧中大快人心的正义主题。
+                        </p>
+                        <a href="#" class="btn btn-outline">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Song Card 2 -->
+                <article class="card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/ai/300/200" alt="爱不疚封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">爱不疚</h3>
+                        <div class="card-meta">
+                            <span>演唱：林峯</span>
+                            <span>作词：林夕</span>
+                        </div>
+                        <p class="card-desc">
+                            第二部《溏心风暴之家好月圆》主题曲。曲风深情款款，唱出了角色间错综复杂的情感纠葛，是林峯的代表作之一。
+                        </p>
+                        <a href="#" class="btn btn-outline">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Song Card 3 -->
+                <article class="card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/love/300/200" alt="包青天封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">包青天</h3>
+                        <div class="card-meta">
+                            <span>演唱：郑欣宜</span>
+                            <span>作词：林夕</span>
+                        </div>
+                        <p class="card-desc">
+                            第三部《溏心风暴3》主题曲。歌词带有宿命感，旋律悠扬，反映了家族兴衰与个人命运的无奈。
+                        </p>
+                        <a href="#" class="btn btn-outline">查看详情</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Full Playlist List -->
+            <div style="margin-top: 60px;">
+                <h3 style="margin-bottom: 20px; font-size: 1.5rem;">完整原声带曲目</h3>
+                <div class="playlist-list">
+                    <div class="playlist-item">
+                        <div class="track-number">01</div>
+                        <div class="track-info">
+                            <div class="track-name">天道好还</div>
+                            <div class="track-artist">杨千嬅</div>
+                        </div>
+                        <div class="track-duration">04:32</div>
+                        <div class="track-actions">
+                            <button class="icon-btn" title="收藏">♥</button>
+                            <button class="icon-btn" title="下载">⬇</button>
+                        </div>
+                    </div>
+                    <div class="playlist-item">
+                        <div class="track-number">02</div>
+                        <div class="track-info">
+                            <div class="track-name">爱不疚</div>
+                            <div class="track-artist">林峯</div>
+                        </div>
+                        <div class="track-duration">04:15</div>
+                        <div class="track-actions">
+                            <button class="icon-btn" title="收藏">♥</button>
+                            <button class="icon-btn" title="下载">⬇</button>
+                        </div>
+                    </div>
+                    <div class="playlist-item">
+                        <div class="track-number">03</div>
+                        <div class="track-info">
+                            <div class="track-name">包青天</div>
+                            <div class="track-artist">郑欣宜</div>
+                        </div>
+                        <div class="track-duration">03:58</div>
+                        <div class="track-actions">
+                            <button class="icon-btn" title="收藏">♥</button>
+                            <button class="icon-btn" title="下载">⬇</button>
+                        </div>
+                    </div>
+                    <div class="playlist-item">
+                        <div class="track-number">04</div>
+                        <div class="track-info">
+                            <div class="track-name">天道好还 (伴奏)</div>
+                            <div class="track-artist">杨千嬅</div>
+                        </div>
+                        <div class="track-duration">04:32</div>
+                        <div class="track-actions">
+                            <button class="icon-btn" title="收藏">♥</button>
+                            <button class="icon-btn" title="下载">⬇</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Guide Section -->
+        <section id="download" class="container">
+            <div class="section-header">
+                <h2>资源下载指南</h2>
+                <p>关于正版音源与版权说明</p>
+            </div>
+            <div style="background: #fff; padding: 30px; border-radius: var(--border-radius); border-left: 5px solid var(--accent-gold);">
+                <h4 style="margin-bottom: 15px; color: var(--text-main);">🎵 获取正版音乐建议</h4>
+                <p style="margin-bottom: 15px; color: var(--text-light);">
+                    为了支持创作者和唱片公司，建议通过以下正规渠道获取《溏心风暴》系列主题曲的高品质音源：
+                </p>
+                <ul style="color: var(--text-light); margin-left: 20px; list-style: disc;">
+                    <li><strong>音乐流媒体平台：</strong> 如 Spotify, Apple Music, QQ音乐, 网易云音乐等搜索“林夕”、“杨千嬅”或“方大同”。</li>
+                    <li><strong>数字专辑购买：</strong> 各大音乐平台通常提供方大同、林峯等歌手的单曲或精选集购买。</li>
+                    <li><strong>实体唱片：</strong> 关注二手交易平台或唱片行，寻找TVB发行的影视原声带CD。</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container">
+            <div class="section-header">
+                <h2>常见问题</h2>
+                <p>关于主题曲的常见疑问解答</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">《溏心风暴》的主题曲都是由林夕填词吗？</div>
+                    <div class="faq-answer">
+                        是的，该系列剧集的主题曲歌词均由著名填词人林夕创作，这也使得歌曲与剧情的契合度极高，具有浓厚的林夕式哲思与情感色彩。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">《爱不疚》是谁演唱的？</div>
+                    <div class="faq-answer">
+                        《爱不疚》是TVB剧集《溏心风暴之家好月圆》的主题曲，由林峯演唱。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">在哪里可以试听《天道好还》？</div>
+                    <div class="faq-answer">
+                        您可以在各大主流音乐平台（如QQ音乐、网易云音乐、酷狗音乐）搜索“天道好还 杨千嬅”即可找到并提供在线试听和下载服务。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        本站致力于整理和展示经典影视金曲，为乐迷和剧迷提供一个回顾港剧辉煌时代的音乐空间。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">剧集列表</a></li>
+                        <li><a href="#">歌手专区</a></li>
+                        <li><a href="#">歌词大全</a></li>
+                        <li><a href="#">最新资讯</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>友情链接</h4>
+                    <ul>
+                        <li><a href="#">TVB官方网站</a></li>
+                        <li><a href="#">香港电台</a></li>
+                        <li><a href="#">华语乐坛</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 溏心风暴主题曲资源库. All Rights Reserved. 本站仅做资源索引与介绍，不提供盗版下载。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项状态
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
